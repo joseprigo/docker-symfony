@@ -1,6 +1,6 @@
 # Docker network ready to start coding your Symfony app
 
-After following the tutorial by  Gary Clarke https://github.com/GaryClarke on how to set a working envoriment of docker containers to run a Symfony app I thought it would be useful to save a copy I can use as a template for my future projects. Moreover, I could create a repo so everyone can have a working symfony env out of the box. And so I did.
+After following the tutorial by  Gary Clarke https://github.com/GaryClarke on how to set a working envoriment of docker containers to run a Symfony app I thought it would be useful to save a copy I can use as a template for my future projects. Moreover, I could create a repo so everyone can have a working symfony env out of the box.
 
 I'm not an expert nor an enthusiast of docker so I strongly recommend you to watch the tutorial series by Gary. I found it really educational. 
 https://www.youtube.com/watch?v=ITOnpzkzlYM&list=PLQH1-k79HB39jeuhSFRwAg2i-BqDeArP-&ab_channel=GaryClarke
@@ -62,6 +62,10 @@ chown 1000:1000 -R .
 
 Any other more definitive solution would be most appreciated, let me know if you have one. Thanks
 
-# 
+# Final note and greetings
+
+First of all, a big shoutout for Gary Clarke for his amazing tutorial.
+
+Finally, feel free to share any recommendations or issues you encounter, I probably won't know the answer but it would be mutualy benefitial for all symfony users.
 
 
