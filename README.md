@@ -44,12 +44,14 @@ docker-compose run --rm node-service npm run dev
 Now you have started a docker project which happens to contain some symofny directories, you don't need to (and shouldn't) push and pull all the docker related items every time, create a proper symfony repo inside de /app directory.
 
 The working tree goes as follows:
-
+```
 docker-symfony
 ├── app  (this is your symfony app, start your git project here)
 ├── mysql
 ├── nginx
 └── php
+```
+
  
  # Run and stop the envoriment
  
