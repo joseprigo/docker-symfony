@@ -15,29 +15,33 @@ Anyways, for those who don't have time to watch a 30 minute tutorial here is a q
 ## 1. Build the php container
 
 Once the repo is downloaded create de php container
-
+```
 docker-compose up -d --build
+```
 
 ## 2. install composer (inside the php container!)
-
+```
 docker exec -it php74-container bash
 
 composer install
-
+```
 exit the container
 
 ## 3. Create the databse
-
+```
 docker-compose run --rm php74-service php bin/console doctrine:database:create
-
+```
 ## 4. Install yarn / npm
 
-
+```
 docker-compose run --rm node-service yarn install
 docker-compose run --rm node-service yarn dev
+```
 
+```
 docker-compose run --rm node-service npm install
 docker-compose run --rm node-service npm run dev
+```
 
 ## 5. Create a repo for your symfony app.
 
@@ -57,25 +61,32 @@ docker-symfony
  
  Go to the root of this project and run:
  to start:
- 
+ ```
  docker-compose up -d
+ ```
  
  To stop:
+ ```
  docker-compose down
+ ```
  
  When it is running to interact with some container use docker exec
- 
+ ```
  docker exec -it [container name] [command to run]
+ ```
  
  example, run bash inside the php container:
+ ```
  docker exec -it php74-container bash
-
+```
 
 # Permissions of files created inside a container
 
 Files and directories created by composer or yarn inside the containers are created by the root user since this is the user inside the container.
 By now I came up with changing the owner once the files are created
+```
 chown 1000:1000 -R .
+```
 
 Any other more definitive solution would be most appreciated, let me know if you have one. Thanks
 
