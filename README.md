@@ -10,15 +10,15 @@ Anyways, for those who don't have time to watch a 30 minute tutorial here is a q
 
 # Guide
 
-0. Requirements: install docker
+## 0. Requirements: install docker
 
-1. Build the php container
+## 1. Build the php container
 
 Once the repo is downloaded create de php container
 
 docker-compose up -d --build
 
-2. install composer (inside the php container!)
+## 2. install composer (inside the php container!)
 
 docker exec -it php74-container bash
 
@@ -26,11 +26,11 @@ composer install
 
 exit the container
 
-3. Create the databse
+## 3. Create the databse
 
 docker-compose run --rm php74-service php bin/console doctrine:database:create
 
-4. Install yarn / npm
+## 4. Install yarn / npm
 
 
 docker-compose run --rm node-service yarn install
@@ -39,7 +39,7 @@ docker-compose run --rm node-service yarn dev
 docker-compose run --rm node-service npm install
 docker-compose run --rm node-service npm run dev
 
-5. Create a repo for your symfony app.
+## 5. Create a repo for your symfony app.
 
 Now you have started a docker project which happens to contain some symofny directories, you don't need to (and shouldn't) push and pull all the docker related items every time, create a proper symfony repo inside de /app directory.
 
