@@ -1,0 +1,40 @@
+1. install docker
+
+docker desktop
+
+1.1 optional install git (recommended)
+
+2. pull code
+
+
+3. build the php container
+docker-compose up -d --build
+
+
+4. install symfony in the php74-container
+
+-i interactive
+-t pseudo-TTY
+
+docker exec -it php74-container bash
+
+composer create-project symfony/skeleton .
+
+it is created by the root so change to the main user
+
+chown 1000:1000 -R .
+
+5. Create de db
+
+on .env set the database using the proper service route
+
+DATABASE_URL="mysql://root:secret@mysql8-service:3306/db?serverVersion=8"
+
+docker-compose run --rm php74-service php bin/console doctrine:database:create
+
+install encore
+composer require encore
+
+chown 1000:1000 -R
+6. NODE
+
