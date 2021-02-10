@@ -20,8 +20,15 @@ docker-compose up -d --build
 ```
 
 ## 2. install composer (inside the php container!)
+First check out the php container name. It has the same name of the service with the porject name as a sufix,
 ```
-docker exec -it php74-container bash
+docker ps
+```
+It should be named something like **projectName_php74-service_1**.
+Then enter to the container using the bash console:
+
+```
+docker exec -it **projectName_php74-service_1** bash
 
 composer install
 ```
